@@ -30,6 +30,8 @@ def get_file(rcs, root_path, relative_path, commit, filename):
         :return: the content of the file
 
     """
+    if filename.split('.')[-1] != 'tex':
+        filename = filename+'.tex'
     # Debug info
     logger.info("> Get file %s" % filename)
 
